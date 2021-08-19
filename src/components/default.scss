@@ -1,0 +1,22 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./dice/dice";
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@200;800&family=Open+Sans:wght@300;400;700;800&display=swap');
+
+//Colors
+$blue : #0bc6e3;
+$yellow : #fdca41;
+$pink : #ff93b7;
+$dark-pink : #f9316d;
+$dark-blue : #311687;
+
+
+*{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+    &:focus {
+        outline:none !important;
+    }
+}

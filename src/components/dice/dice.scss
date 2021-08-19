@@ -1,0 +1,178 @@
+.eye {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.dice {
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    position: relative;
+    transform: scale(1.5);
+
+    &-one {
+        .eyes {
+            @extend .eye;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .eyes-two {
+            display: none;
+        }
+    }
+
+    &-two {
+        .eyes {
+            @extend .eye;
+            top: 5px;
+            left: 5px;
+        }
+        .eyes-two {
+            @extend .eye;
+            bottom: 5px;
+            right: 5px;
+        }
+    }
+
+    &-three {
+        .eyes {
+            @extend .eye;
+            top: 5px;
+            left: 5px;
+
+            &:after {
+                @extend .eye;
+                content: "";
+                top: 14px;
+                left: 14px;
+            }
+        }
+        .eyes-two {
+            @extend .eye;
+            bottom: 5px;
+            right: 5px;
+        }
+    }
+
+    &-four {
+        .eyes {
+            @extend .eye;
+            top: 5px;
+            left: 5px;
+
+            &:after {
+                @extend .eye;
+                content: "";
+                top: 27px;
+                left: 0;
+            }
+        }
+        .eyes-two {
+            @extend .eye;
+            bottom: 4px;
+            right: 5px;
+
+            &:after {
+                @extend .eye;
+                content: "";
+                bottom: 27px;
+                right: 0;
+            }
+        }
+    }
+
+    &-five {
+        .eyes {
+            @extend .eye;
+            top: 5px;
+            left: 5px;
+
+            &:after {
+                @extend .eye;
+                content: "";
+                top: 27px;
+                left: 0;
+            }
+        }
+        .eyes-two {
+            @extend .eye;
+            bottom: 4px;
+            right: 5px;
+
+            &:before {
+                @extend .eye;
+                content: "";
+                top: -13px;
+                left: -13px;
+            }
+
+            &:after {
+                @extend .eye;
+                content: "";
+                bottom: 27px;
+                right: 0;
+            }
+        }
+    }
+
+    &-six {
+        .eyes {
+            @extend .eye;
+            top: 5px;
+            left: 5px;
+
+            &:before {
+                @extend .eye;
+                content: "";
+                top: 13.5px;
+                left: 0;
+            }
+
+            &:after {
+                @extend .eye;
+                content: "";
+                top: 27px;
+                left: 0;
+            }
+        }
+        .eyes-two {
+            @extend .eye;
+            bottom: 4px;
+            right: 5px;
+
+            &:before {
+                @extend .eye;
+                content: "";
+                top: -13.5px;
+                right: 0;
+            }
+
+            &:after {
+                @extend .eye;
+                content: "";
+                bottom: 27px;
+                right: 0;
+            }
+        }
+    }
+}
+
+.rol-the-dice {
+    margin-top: 50px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: 2px solid black;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+        background: darkgrey;
+    }
+}
